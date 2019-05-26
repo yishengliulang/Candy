@@ -6,5 +6,7 @@ str := SubStr(str, 1, -StrLen(" "))
 
 ;~ StringSplit,p,str,&
 Send !d
-SendInput %str%{Enter}
+SendInput %str%
+Send {Enter}
+ControlFocus,SysListView321,A
 
