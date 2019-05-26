@@ -4,4 +4,6 @@ Loop, %0%  ; 对每个参数进行循环:
     str := SubStr(str, 1, -StrLen(" "))
 }
 ;~ StringSplit,p,str,&
-Clipboard = %str%
+Send !d
+SendInput %str%{Enter}
+
