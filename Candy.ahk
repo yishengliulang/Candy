@@ -76,9 +76,10 @@ Label_Candy_Start:
     ClipWait,0.5
     If ( ErrorLevel  )          ;如果没有选择到什么东西，则退出
     {
-        Clipboard := Candy_Saved_ClipBoard    ;还原粘贴板
-        Candy_Saved_ClipBoard =
-        Return
+        ;~ Clipboard := Candy_Saved_ClipBoard    ;还原粘贴板
+        ;~ Candy_Saved_ClipBoard =
+        ;~ Return
+        Candy_isEmpty := true
     }
     Candy_isFile := DllCall("IsClipboardFormatAvailable", "UInt", 15)   ;是否是文件类型
     Candy_isHtml := DllCall("RegisterClipboardFormat", "str", "HTML Format")  ;是否Html类型
@@ -145,7 +146,10 @@ Label_Candy_Start:
         }
 
         IniRead,Candy_ShortText_Length,%Candy_ProFile_Ini%,Candy_Settings,ShortText_Length,80   ;没有定义，则根据所选文本的长短，设定为长文本或者短文本
-        CandySel_Ext:=StrLen(CandySel) < Candy_ShortText_Length ? "ShortText" : "LongText" ;区分长短文本
+        if(StrLen(CandySel)<=0)
+            CandySel_Ext:="NothingText"
+        else
+            CandySel_Ext:=StrLen(CandySel) < Candy_ShortText_Length ? "ShortText" : "LongText" ;区分长短文本
     }
  /*
 ╔══════════════════════════════════════╗
@@ -173,8 +177,9 @@ Label_Candy_Read_Value:
                 }
                 Else
                 {
-                    Run,%CandySel%, ,UseErrorLevel  ;层层把关都没有么，好失望的说，就直接运行吧
-                    Return
+                    Candy_Cmd:="menu|Nothing.ini"
+                    ;~ Run,%CandySel%, ,UseErrorLevel  ;层层把关都没有么，好失望的说，就直接运行吧
+                    ;~ Return
                 }
             }
         }
@@ -217,9 +222,12 @@ Label_Candy_DrawMenu:
     {
         SkSub_CreateMenu(v,"CandyTopLevelMenu","Label_Candy_HandleMenu",CandyMenu_IconDir,CandyMenu_IconSize)
     }
-    MouseGetPos,CandyMenu_X, CandyMenu_Y
-    MouseMove,CandyMenu_X,CandyMenu_Y,0
-    MouseMove,CandyMenu_X,CandyMenu_Y,0
+    ;~ MouseGetPos,CandyMenu_X, CandyMenu_Y
+    MouseMove,0,0,0
+    MouseMove,0,0,0
+
+    ;~ MouseMove,CandyMenu_X,CandyMenu_Y,0
+    ;~ MouseMove,CandyMenu_X,CandyMenu_Y,0
 ;     ToolTip,% A_TickCount-CandyStartTick,200,0     ;若要评估出menu时间，这里需打开 ,共三处，2/3
     Menu,CandyTopLevelMenu,shOW
 ;     ToolTip ;若要评估出menu时间，这里需打开 ,共三处，3/3
@@ -258,6 +266,7 @@ return
 ╚══════════════════════════════════════╝
 */
 Label_Candy_RunCommand:
+   ;~ WinGet,w,PID,A
     Candy_Cmd:=SkSub_EnvTrans(Candy_Cmd)  ;替换自变量以及系统变量,Ini里面用~%表示一个%,当然要用~~%，表示一个原义的~%
     Candy_Cmd=%Candy_Cmd%
     If (instr(Candy_Cmd,"{SetClipBoard:pure}")+instr(Candy_Cmd,"{SetClipBoard:rich}") )       ;这个开关指令会修改系统粘贴板，不会对命令行本身产生作用。所以先要从命令行替换掉。
@@ -305,12 +314,14 @@ Label_Candy_RunCommand:
         {
             CdInput_Prompt:= RegExReplace(CdInput_M,"i).*\{input\:(.*?)(:hide)?}.*","$1")
             CdInput_Hide:= RegExMatch(CdInput_M,"i)\{input:.*?:hide}") ? "hide":""
+            
             Gui +LastFound +OWnDialogs +AlwaysOnTop
-            InputBox, CdInput_txt,Candy InputBox,`n%CdInput_Prompt% ,%CdInput_Hide%, 285, 175,,,,,
+            InputBox, CdInput_txt,Candy InputBox,`n%CdInput_Prompt% ,%CdInput_Hide%, 285, 175
             If ErrorLevel
                 Return
             Else
                 StringReplace,Candy_Cmd,Candy_Cmd,%CdInput_M%,%CdInput_txt%
+            ;~ MsgBox % w
         }
     }
     If instr(Candy_Cmd,"{box:Filebrowser}")
