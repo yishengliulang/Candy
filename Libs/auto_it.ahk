@@ -1,0 +1,1 @@
+auto_it := ComObjCreate("AutoItX3.Control")
