@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\.txt\ShellNew]
+"FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.txt"
+
+[HKEY_CLASSES_ROOT\.cpp\ShellNew]
+"FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.cpp"
