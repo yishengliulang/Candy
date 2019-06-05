@@ -1,7 +1,37 @@
 Windows Registry Editor Version 5.00
 
+[HKEY_CLASSES_ROOT\.odg]
+@=-
+[HKEY_CLASSES_ROOT\.ods]
+@=-
+[HKEY_CLASSES_ROOT\.odp]
+@=-
+[HKEY_CLASSES_ROOT\.odt]
+@=-
+[HKEY_CLASSES_ROOT\.ppo]
+@=-
+[HKEY_CLASSES_ROOT\.rar]
+@=-
+[HKEY_CLASSES_ROOT\.vsd]
+@=-
+[HKEY_CLASSES_ROOT\.dps]
+@=-
+[HKEY_CLASSES_ROOT\.ppt]
+@=-
+[HKEY_CLASSES_ROOT\.zip]
+@=-
+
+
+[HKEY_CLASSES_ROOT\.txt]
+@="txtfile"
+[HKEY_CLASSES_ROOT\txtfile]
+@="文本文件"
 [HKEY_CLASSES_ROOT\.txt\ShellNew]
 "FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.txt"
 
+[HKEY_CLASSES_ROOT\.cpp]
+@="cppfile"
+[HKEY_CLASSES_ROOT\cppfile]
+@="CPP文件"
 [HKEY_CLASSES_ROOT\.cpp\ShellNew]
 "FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.cpp"
