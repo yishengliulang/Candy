@@ -1,5 +1,11 @@
 Windows Registry Editor Version 5.00
 
+;删除新建公文包
+[-HKEY_CLASSES_ROOT\.bfc]
+@="-Briefcase"
+
+[HKEY_CLASSES_ROOT\.mdb]
+@=-
 [HKEY_CLASSES_ROOT\.odg]
 @=-
 [HKEY_CLASSES_ROOT\.ods]
@@ -21,17 +27,90 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\.zip]
 @=-
 
+[HKEY_CLASSES_ROOT\.ahk]
+@=-
+Content Type=-
+[HKEY_CLASSES_ROOT\.ahk]
+@="ahkfile"
+[HKEY_CLASSES_ROOT\.ahk\ShellNew]
+"FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.ahk"
+[HKEY_CLASSES_ROOT\ahkfile]
+@="AHK文件"
+[HKEY_CLASSES_ROOT\ahkfile\DefaultIcon]
+@="C:\\Program Files\\AutoHotkey\\AutoHotkey.exe,1"
+[HKEY_CLASSES_ROOT\ahkfile\Shell\Open\Command]
+@="\"C:\\Program Files\\AutoHotkey\\AutoHotkeyU32.exe\" \"%1\" %*"
+
+[HKEY_CLASSES_ROOT\.au3]
+@=-
+Content Type=-
+[HKEY_CLASSES_ROOT\.au3]
+@="au3file"
+[HKEY_CLASSES_ROOT\.au3\ShellNew]
+"FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.au3"
+[HKEY_CLASSES_ROOT\au3file]
+@="AU3文件"
+[HKEY_CLASSES_ROOT\au3file\DefaultIcon]
+@="C:\\Program Files\\AutoIt3\\AutoIt3.exe,1"
+[HKEY_CLASSES_ROOT\au3file\Shell\Open\Command]
+@="\"C:\\Program Files\\AutoIt3\\AutoIt3.exe\" \"%1\" %*"
+
 
 [HKEY_CLASSES_ROOT\.txt]
+@=-
+Content Type=-
+[HKEY_CLASSES_ROOT\.txt]
 @="txtfile"
-[HKEY_CLASSES_ROOT\txtfile]
-@="文本文件"
 [HKEY_CLASSES_ROOT\.txt\ShellNew]
 "FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.txt"
+[HKEY_CLASSES_ROOT\txtfile]
+@="文本文件"
+[HKEY_CLASSES_ROOT\txtfile\DefaultIcon]
+@="%SystemRoot%\\system32\\shell32.dll,-152"
+[HKEY_CLASSES_ROOT\txtfile\Shell\Open\Command]
+@="notepad.exe %1 %*"
+
 
 [HKEY_CLASSES_ROOT\.cpp]
+@=-
+Content Type=-
+[HKEY_CLASSES_ROOT\.cpp]
 @="cppfile"
-[HKEY_CLASSES_ROOT\cppfile]
-@="CPP文件"
 [HKEY_CLASSES_ROOT\.cpp\ShellNew]
 "FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.cpp"
+[HKEY_CLASSES_ROOT\cppfile]
+@="CPP文件"
+[HKEY_CLASSES_ROOT\cppfile\DefaultIcon]
+@="%SystemRoot%\\system32\\shell32.dll,-152"
+[HKEY_CLASSES_ROOT\cppfile\Shell\Open\Command]
+@="notepad.exe %1 %*"
+
+[HKEY_CLASSES_ROOT\.doc]
+@=-
+Content Type=-
+[HKEY_CLASSES_ROOT\.doc]
+@="docfile"
+[HKEY_CLASSES_ROOT\.doc\ShellNew]
+"FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.doc"
+[HKEY_CLASSES_ROOT\docfile]
+@="Word文档"
+[HKEY_CLASSES_ROOT\docfile\DefaultIcon]
+@="C:\\WINDOWS\\Installer\\{90110804-6000-11D3-8CFE-0150048383C9}\\wordicon.exe,1"
+[HKEY_CLASSES_ROOT\docfile\Shell\Open\Command]
+@="\"C:\\Program Files\\Microsoft Office\\OFFICE11\\WINWORD.EXE\" \"%1\" %*"
+
+
+
+[HKEY_CLASSES_ROOT\.xls]
+@=-
+Content Type=-
+[HKEY_CLASSES_ROOT\.xls]
+@="xlsfile"
+[HKEY_CLASSES_ROOT\.xls\ShellNew]
+"FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.xls"
+[HKEY_CLASSES_ROOT\xlsfile]
+@="Excel工作簿"
+[HKEY_CLASSES_ROOT\xlsfile\DefaultIcon]
+@="C:\WINDOWS\Installer\{90110804-6000-11D3-8CFE-0150048383C9}\xlicons.exe,8"
+[HKEY_CLASSES_ROOT\xlsfile\Shell\Open\Command]
+@="\"C:\\Program Files\\Microsoft Office\\OFFICE11\\Excel.EXE\" \"%1\" %*"
