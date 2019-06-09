@@ -4,29 +4,6 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\.bfc]
 @="-Briefcase"
 
-[HKEY_CLASSES_ROOT\.mdb]
-@=-
-[HKEY_CLASSES_ROOT\.odg]
-@=-
-[HKEY_CLASSES_ROOT\.ods]
-@=-
-[HKEY_CLASSES_ROOT\.odp]
-@=-
-[HKEY_CLASSES_ROOT\.odt]
-@=-
-[HKEY_CLASSES_ROOT\.ppo]
-@=-
-[HKEY_CLASSES_ROOT\.rar]
-@=-
-[HKEY_CLASSES_ROOT\.vsd]
-@=-
-[HKEY_CLASSES_ROOT\.dps]
-@=-
-[HKEY_CLASSES_ROOT\.ppt]
-@=-
-[HKEY_CLASSES_ROOT\.zip]
-@=-
-
 [HKEY_CLASSES_ROOT\.ahk]
 @=-
 Content Type=-
@@ -51,7 +28,7 @@ Content Type=-
 [HKEY_CLASSES_ROOT\au3file]
 @="AU3文件"
 [HKEY_CLASSES_ROOT\au3file\DefaultIcon]
-@="C:\\Program Files\\AutoIt3\\AutoIt3.exe,1"
+@="C:\\Program Files\\AutoIt3\\AutoIt3.exe,0"
 [HKEY_CLASSES_ROOT\au3file\Shell\Open\Command]
 @="\"C:\\Program Files\\AutoIt3\\AutoIt3.exe\" \"%1\" %*"
 
@@ -66,7 +43,7 @@ Content Type=-
 [HKEY_CLASSES_ROOT\txtfile]
 @="文本文件"
 [HKEY_CLASSES_ROOT\txtfile\DefaultIcon]
-@="%SystemRoot%\\system32\\shell32.dll,-152"
+@="%SystemRoot%\\system32\\shell32.dll,70"
 [HKEY_CLASSES_ROOT\txtfile\Shell\Open\Command]
 @="notepad.exe %1 %*"
 
@@ -81,7 +58,7 @@ Content Type=-
 [HKEY_CLASSES_ROOT\cppfile]
 @="CPP文件"
 [HKEY_CLASSES_ROOT\cppfile\DefaultIcon]
-@="%SystemRoot%\\system32\\shell32.dll,-152"
+@="%SystemRoot%\\system32\\shell32.dll,1"
 [HKEY_CLASSES_ROOT\cppfile\Shell\Open\Command]
 @="notepad.exe %1 %*"
 
