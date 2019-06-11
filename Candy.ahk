@@ -36,7 +36,7 @@ Label_My_global_and_PreDefined_Var:
 	global szMenuIdx:={}      ;菜单用1
 	global szMenuContent:={}      ;菜单用2
 	global szMenuWhichFile:={}      ;菜单用3
-	global GeneralSettings_ini     := "ini\GeneralSettings.ini"
+	global GeneralSettings_ini     := "C:\CandySettings.ini"
 	IniRead All_MyVar,%GeneralSettings_ini%,MyVar		   	;读取我的变量，进行环境变量设置
 	loop,parse,All_MyVar,`n
 	{
