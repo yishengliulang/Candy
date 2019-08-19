@@ -23,7 +23,7 @@ SetTitleMatchMode,2
 DetectHiddenWindows On
 AutoTrim,on
 SetBatchLines -1
-ComObjError(0)
+;~ ComObjError(0)
 Menu, Tray, UseErrorLevel
 ; #NoTrayIcon
 SkSub_CreatTrayMenu()   ;显示一个自定义的托盘菜单
@@ -54,7 +54,9 @@ Label_Candy_SetHotKey:         ;热键定义段，这个部分要插入到“全
 	IniRead,Candy_hotkey,%GeneralSettings_ini%,Candy_Hotkey           ;读取整个热键定义字段，自定义热键格式:   热键=配置文件
 	Loop,parse,Candy_hotkey,`n     ;循环读取ini里面，热键定义字段的每一行
 	{
+        ;~ MsgBox % A_LoopField
 		Hotkey,% RegExReplace(A_loopfield,"=.*?$"),Label_Candy_Start,On,UseErrorLevel   ;左边是热键
+        
 		If ErrorLevel  ;热键出错
             MsgBox % "您定义的热键:      "   RegExReplace(A_loopfield,"=.*?$")   "     不可用，请检查!"
 	}
