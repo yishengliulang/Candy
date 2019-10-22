@@ -12,7 +12,8 @@ Content Type=-
 [HKEY_CLASSES_ROOT\.ahk\ShellNew]
 "FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.ahk"
 [HKEY_CLASSES_ROOT\ahkfile]
-@="AHK文件"
+@="AHK文件-&1"
+"shortcutIndex"="1"
 [HKEY_CLASSES_ROOT\ahkfile\DefaultIcon]
 @="C:\\Program Files\\AutoHotkey\\AutoHotkey.exe,1"
 [HKEY_CLASSES_ROOT\ahkfile\Shell\Open\Command]
@@ -26,7 +27,9 @@ Content Type=-
 [HKEY_CLASSES_ROOT\.au3\ShellNew]
 "FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.au3"
 [HKEY_CLASSES_ROOT\au3file]
-@="AU3文件"
+@="AU3文件-&2"
+"shortcutIndex"="2"
+
 [HKEY_CLASSES_ROOT\au3file\DefaultIcon]
 @="C:\\Program Files\\AutoIt3\\AutoIt3.exe,0"
 [HKEY_CLASSES_ROOT\au3file\Shell\Open\Command]
@@ -41,7 +44,9 @@ Content Type=-
 [HKEY_CLASSES_ROOT\.txt\ShellNew]
 "FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.txt"
 [HKEY_CLASSES_ROOT\txtfile]
-@="文本文件"
+@="文本文件-&3"
+"shortcutIndex"="3"
+
 [HKEY_CLASSES_ROOT\txtfile\DefaultIcon]
 @="%SystemRoot%\\system32\\shell32.dll,70"
 [HKEY_CLASSES_ROOT\txtfile\Shell\Open\Command]
@@ -56,7 +61,8 @@ Content Type=-
 [HKEY_CLASSES_ROOT\.cpp\ShellNew]
 "FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.cpp"
 [HKEY_CLASSES_ROOT\cppfile]
-@="CPP文件"
+@="CPP文件-&4"
+"shortcutIndex"="4"
 [HKEY_CLASSES_ROOT\cppfile\DefaultIcon]
 @="%SystemRoot%\\system32\\shell32.dll,1"
 [HKEY_CLASSES_ROOT\cppfile\Shell\Open\Command]
@@ -70,7 +76,8 @@ Content Type=-
 [HKEY_CLASSES_ROOT\.doc\ShellNew]
 "FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.doc"
 [HKEY_CLASSES_ROOT\docfile]
-@="Word文档"
+@="Word文档-&5"
+"shortcutIndex"="5"
 [HKEY_CLASSES_ROOT\docfile\DefaultIcon]
 @="C:\\WINDOWS\\Installer\\{90110804-6000-11D3-8CFE-0150048383C9}\\wordicon.exe,1"
 [HKEY_CLASSES_ROOT\docfile\Shell\Open\Command]
@@ -86,7 +93,8 @@ Content Type=-
 [HKEY_CLASSES_ROOT\.xls\ShellNew]
 "FileName"="E:\\TOOLS\\Candy 2.0.0.6\\新建文件配置\\模板.xls"
 [HKEY_CLASSES_ROOT\xlsfile]
-@="Excel工作簿"
+@="Excel工作簿-&6"
+"shortcutIndex"="6"
 [HKEY_CLASSES_ROOT\xlsfile\DefaultIcon]
 @="C:\WINDOWS\Installer\{90110804-6000-11D3-8CFE-0150048383C9}\xlicons.exe,8"
 [HKEY_CLASSES_ROOT\xlsfile\Shell\Open\Command]
